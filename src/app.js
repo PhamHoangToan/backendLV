@@ -12,6 +12,8 @@ import KhachSanRouter from "./routers/KhachSanRouter";
 import  ThanhPhoRouter  from "./routers/ThanhPho";
 import  SuKienRouter  from "./routers/SuKien";
 import DonDatPhongRouter from "./routers/dondatphong";
+import Payment from "./routers/payment"
+import Flight from "./routers/Maybay"
 dotenv.config();
 const app = express();
 
@@ -34,5 +36,7 @@ app.use("/api", KhachSanRouter);
 app.use("/api", ThanhPhoRouter);
 app.use("/api", SuKienRouter);
 app.use("/api", DonDatPhongRouter);
+app.use("/api",Payment);
+app.use("/api",Flight);
 app.use("/uploads", express.static("uploads"));
 export const viteNodeApp = app;
